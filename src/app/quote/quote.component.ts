@@ -18,8 +18,11 @@ export class QuoteComponent implements OnInit {
 
       ]
 
-  constructor() { }
-  ngOnInit() {
-  }
+      toogleDetails(index){
+            this.quotes[index].showDescription = !this.quotes[index].showDescription;
+        }
 
-}
+      constructor() { }
+      ngOnInit() {
+      }
+    }
