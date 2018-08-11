@@ -8,6 +8,7 @@ import { Quote } from '../quote'
 })
 
 export class QuoteComponent implements OnInit {
+  
   quotes = [
     new Quote(1, 'You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.', 'Dr. Seuss', new Date(1944, 3, 5)),
     new Quote(2, 'I’m selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can’t handle me at my worst, then you sure as hell don’t deserve me at my best.', 'Marilyn Monroe', new Date(1934, 12, 15)),

@@ -6,11 +6,23 @@
 
 <hr>
 
-<ul>
-    <div *ngFor='let quote of quotes;let i = index'>
-        <li id="{{i}}" appHighlight>{{quote.name}} created on {{quote.completeDate|date}}</li>
-        <button  (click)='toogleDetails(i)'>Details</button>
-
-        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'deleteGoal($event,i)'></app-quote-details>
+<div class="container">
+    <div class="row">
+        <app-quote-form></app-quote-form>
     </div>
-</ul>
+</div>
+
+<div class="container">
+    <div class="row" *ngFor="let quote of quotes;let i = 'index'">
+        <div class="row">
+            <h4 id="{{i}}" appHighlight>{{quote.name}} due on {{quote.completeDate|date}}</h4>
+            <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+        </div>
+
+        <div class="row" *ngIf="quote.showDescription">
+        <app-quote-details  [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
+    </div>
+
+</div>
+
+</div>
