@@ -11,6 +11,6 @@
         <li id="{{i}}" appHighlight>{{quote.name}} created on {{quote.completeDate|date}}</li>
         <button  (click)='toogleDetails(i)'>Details</button>
 
-        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeGoal($event,i)'></app-quote-details>
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'deleteGoal($event,i)'></app-quote-details>
     </div>
 </ul>
