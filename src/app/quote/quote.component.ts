@@ -16,7 +16,7 @@ export class QuoteComponent implements OnInit {
     new Quote(4, 'Get busy living or get busy dying.', 'Stephen King', new Date(1994, 8, 17)),
     new Quote(5, 'Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do.', 'Mark Twain', new Date(1902, 2, 28)),
     new Quote(6, 'When I dare to be powerful – to use my strength in the service of my vision, then it becomes less and less important whether I am afraid.', 'Audre Lorde', new Date(2004, 12, 12)),
-    new Quote(7, 'The noblest art is that of making others happy.', 'P. T. Barnum', new Date(1924,4,4)),
+    new Quote(7, 'The noblest art is that of making others happy.', 'P. T. Barnum', new Date(1924, 4, 4)),
 
   ]
 
@@ -33,14 +33,16 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  addNewQuote(quote){
-            let quoteLength = this.quotes.length;
-            quote.id=quoteLength+1;
-            quote.completeDate = new Date(quote.completeDate)
-            this.quotes.push(quote)
+  addNewQuote(quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
 
-        }
-    constructor() { }
-    ngOnInit() {
-    }
   }
+
+  
+  constructor() { }
+  ngOnInit() {
+  }
+}

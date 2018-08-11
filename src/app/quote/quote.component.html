@@ -16,7 +16,8 @@
   <div class="row" *ngFor="let quote of quotes;let i = 'index'">
     <div class="row">
       <h4 id="{{i}}" appHighlight>{{quote.name}} Date written: {{quote.completeDate|date}}</h4>
-      <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+      <button class="btn btn-success" (click)='toogleDetails(i)'>More Details</button>
+
     </div>
 
     <div class="row" *ngIf="quote.showDescription">
