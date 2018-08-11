@@ -8,7 +8,7 @@
 
 <ul>
     <div *ngFor='let quote of quotes;let i = index'>
-        <li id="{{i}}" appHighlight>{{quote.name}}</li>
+        <li id="{{i}}" appHighlight>{{quote.name}} created on {{quote.completeDate|date}}</li>
         <button  (click)='toogleDetails(i)'>Details</button>
 
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeGoal($event,i)'></app-quote-details>
