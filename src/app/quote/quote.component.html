@@ -17,7 +17,7 @@
     <div class="row">
       <h4 id="{{i}}" appHighlight>{{quote.name}} Date written: {{quote.completeDate|date}}</h4>
       <button class="btn btn-success" (click)='toogleDetails(i)'>More Details</button>
-
+      <like-box></like-box>
     </div>
 
     <div class="row" *ngIf="quote.showDescription">
