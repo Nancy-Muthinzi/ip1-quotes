@@ -21,6 +21,17 @@
         </div>
 
       </div>
+
+      <!-- Submitter -->
+      <div class="form-group">
+        <label for="description">Submitted by:</label>
+        <input type="text" class="form-control" id="name" rows="2" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
+        <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+          <p> Name is Required</p>
+
+        </div>
+
+      </div>
       <!-- Date Input -->
       <div class="form-group">
         <label for="complete">Date written</label>
