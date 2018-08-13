@@ -7,7 +7,11 @@ This is an application where users can create quotes and have those quotes voted
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.0-rc.0.
 
-I used HTML to write the code, CSS and Bootstrap to style and organise it; and Markdown language on the ABOUTME section. I created the code using Atom and Git applications.
+I wrote the template on HTML, used CSS and Bootstrap to style and organise it, Typescript for functionality purposes; and Markdown language on the ABOUTME section. I created the code using Atom and Git applications.
+
+## Link to Site
+
+Link deployed live on https://nancy-muthinzi.github.io/ip1-quotes/
 
 ## Development server
 
@@ -28,6 +32,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## CONTACT DETAILS
+
+If there are any issues on how the code runs, concerns, questions or ideas, kindly reach out to us on nanciekathini@gmail.com;
 
 ## Further help
 
