@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {AlertsService} from './alert-service/alerts.service'
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
@@ -20,13 +22,13 @@ import { QuoteLikeComponent } from './quote-like/quote-like.component';
     QuoteFormComponent,
     QuoteLikeComponent,
 
-
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AlertsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
