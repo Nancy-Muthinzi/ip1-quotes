@@ -6,3 +6,4 @@ export class QuoteService {
   getQuotes() {
     return Quotes;
   }
+}

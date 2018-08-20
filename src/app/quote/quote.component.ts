@@ -15,7 +15,8 @@ import { Quote } from '../quote-class/quote'
 })
 
 export class QuoteComponent implements OnInit {
-  // quotes = Quotes;
+  quotes: Quote[];
+  alertService:AlertsService;
 
   toogleDetails(index) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -27,6 +28,7 @@ export class QuoteComponent implements OnInit {
 
       if (toDelete) {
         this.quotes.splice(index, 1)
+        this.alertService.alertMe("Quote has been deleted")
       }
     }
   }
@@ -37,9 +39,6 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote)
 
   }
-
-  quotes: Quote[];
-  alertService:AlertsService;
 
   constructor(quoteService: QuoteService, alertService:AlertsService) {
     this.quotes = quoteService.getQuotes();
